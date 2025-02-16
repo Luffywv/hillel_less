@@ -1,9 +1,30 @@
- # Ввод данных
-user_str1 = input("Введите первое слово: ")
-user_str2 = input("Введите второе слово: ")
-# Вывод в обратном порядке
-reverse_order = user_str1[::-1] +"" "" + user_str2
-# Вывод значений
-print(f"Вывод данных: {reverse_order}")
+# Простой калькулятор
+# Ввод данных
+
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+operator = input("Введите операцию (+, -, *, /): ")
+
+# Работа с операциями
+if operator == '+':
+    result = num1 + num2
+elif operator == '-':
+    result = num1 - num2
+elif operator == '*':
+    result = num1 * num2
+elif operator == '/':
+    if num2 == 0:
+        print("Деление на ноль невозможно!")
+    else:
+        result = num1 / num2
+else:
+    print("Неизвестная операция.")
+    # Вывод данных
+if operator in ('+', '-', '*', '/'):
+    print("Результат:", result)
+
+
+
+
 
 
