@@ -1,30 +1,13 @@
-# Простой калькулятор
-# Ввод данных
-
-num1 = float(input("Введите первое число: "))
-num2 = float(input("Введите второе число: "))
-operator = input("Введите операцию (+, -, *, /): ")
-
-# Работа с операциями
-if operator == '+':
-    result = num1 + num2
-elif operator == '-':
-    result = num1 - num2
-elif operator == '*':
-    result = num1 * num2
-elif operator == '/':
-    if num2 == 0:
-        print("Деление на ноль невозможно!")
-    else:
-        result = num1 / num2
+original_list = [1, 2, 3, 4, 5, 6]
+if len(original_list) == 0:
+    result = [[], []]
+elif len(original_list) == 1:
+    result = [original_list[:1], []]
 else:
-    print("Неизвестная операция.")
-    # Вывод данных
-if operator in ('+', '-', '*', '/'):
-    print("Результат:", result)
+    middle = len(original_list) // 2
+    result = [original_list[:middle], original_list[middle:]]
 
-
-
+print(result)
 
 
 
