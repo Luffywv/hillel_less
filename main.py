@@ -1,24 +1,15 @@
-original_list = [1, 2, 3, 4, 5, 6]
-if len(original_list) == 0:
-    result = [[], []]
-elif len(original_list) == 1:
-    result = [original_list[:1], []]
-else:
-    middle = len(original_list) // 2
-    result = [original_list[:middle], original_list[middle:]]
+arr = [0, 1, 7, 2, 4, 8]
+result = sum(arr[i] for i in range(0, len(arr), 2)) * arr[-1] if arr else 0
+print(f"Input: {arr}, Result: {result}")
 
-print(result)
+arr = [1, 3, 5]
+result = sum(arr[i] for i in range(0, len(arr), 2)) * arr[-1] if arr else 0
+print(f"Input: {arr}, Result: {result}")  
 
-# Если не парное число  элементов 
+arr = [6]
+result = sum(arr[i] for i in range(0, len(arr), 2)) * arr[-1] if arr else 0
+print(f"Input: {arr}, Result: {result}")  
 
-original_list = [1, 2, 3, 4, 5]
-if len(original_list) == 0:
-    result = [[], []]
-elif len(original_list) == 1:
-    result = [original_list[:1], []]
-else:
-    middle = len(original_list) // 2  # 5 // 2 = 2
-    result = [original_list[:middle], original_list[middle:]]  # [:2] і [2:]
-
-print(result)  # [[1, 2], [3, 4, 5]]
-
+arr = []
+result = sum(arr[i] for i in range(0, len(arr), 2)) * arr[-1] if arr else 0
+print(f"Input: {arr}, Result: {result}") 
